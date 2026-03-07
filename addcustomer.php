@@ -40,6 +40,8 @@ if (isset($_POST['CustomerID']) && isset($_POST['Name'])):
 
     require 'connect.php';
 
+
+
     $sql = "insert into customer values(:CustomerID, :Name, :Birthdate, :Email, :CountryCode, :OutstandingDebt)";
 
     $stmt = $conn->prepare($sql);
