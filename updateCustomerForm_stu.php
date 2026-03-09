@@ -14,9 +14,8 @@
     $sql_country = "SELECT * FROM country";
     $stmt_c = $conn->prepare($sql_country);
     $stmt_c->execute();
-    $cc = $stmt_c->fetchAll(PDO::FETCH_ASSOC);
+    $cc = $stmt_c->fetchAll();
 
-    $selected = $result_customer['CountryCode']; 
 ?>
 
 <!DOCTYPE html>
