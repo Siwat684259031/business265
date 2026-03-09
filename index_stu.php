@@ -65,7 +65,7 @@ require "connect.php";
                         </td>
 
                         <td>
-                            <a href="deleteCustomer.php?CustomerID=<?= urlencode($r['CustomerID']) ?>" 
+                            <a href="deleteCustomerDB_stu.php?CustomerID=<?= urlencode($r['CustomerID']) ?>" 
                             class="btn btn-danger btn-sm"
                             onclick="return confirm('ยืนยันการลบข้อมูล !!');">
                             ลบ
