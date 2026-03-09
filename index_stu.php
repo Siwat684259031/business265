@@ -11,9 +11,9 @@
 
 <body>
 
-<!-- <?php
+ <?php
 require "connect.php";
- ?> -->
+ ?> 
 
 <div class="container">
     <div class="row">
