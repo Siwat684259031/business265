@@ -11,22 +11,9 @@
 
 <body>
 
-<?php
+<!-- <?php
 require "connect.php";
-
-try {
-    $sql = "SELECT customer.CustomerID, customer.Name, country.CountryName, customer.OutstandingDebt
-            FROM customer
-            JOIN country ON customer.CountryCode = country.CountryCode";
-
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->fetchAll();
-} catch (Exception $e) {
-    $result = [];
-    echo "Error: " . htmlspecialchars($e->getMessage());
-}
-?>
+ ?> -->
 
 <div class="container">
     <div class="row">
@@ -51,7 +38,17 @@ try {
 
                 <tbody>
 
-                <?php foreach ($result as $r) { ?>
+                <?php
+                        //https://pad.riseup.net/p/np-db-keep
+ 
+                        $sql =   "SELECT customer.CustomerID, customer.Name, country.CountryName, customer.OutstandingDebt
+                        FROM customer
+                        JOIN country ON customer.CountryCode = country.CountryCode";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->execute();
+                        $result = $stmt->fetchAll();
+                        foreach ($result as $r) { 
+                        ?>
 
                     <tr>
 
